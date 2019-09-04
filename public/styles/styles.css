@@ -1,46 +1,72 @@
+/* Core Styles */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    width:100%;
+    height:100%;
+    font-weight: 100;
+}
+.main-container{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'row1'
+    'row3'
+    'row2'
+    'row4';
+    grid-gap:5px;
+}
+.row-1{
+    grid-area:row1;
+    background:green;
+    height:10vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.1em;
+    overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  
+}
+.timer{
+    font-size: 2rem;
+    color:#eaeaea;
+}
+.quit-button{
+    font-size:1.2rem;
+    background:white;
+    padding:0.2rem 1.1rem;
+    margin-right:8%;
+}
+.row-2{
+    grid-area:row2;
+    background:red;
+    height:10vh;
+}
+.row-3{
+    grid-area:row3;
+    background:red;
+    height:90vh;
+    margin-top:10vh;
+}
+.dealers-card{
+    background:white;
+    height:30%;
+    width:95%;
+    margin:2% auto;
+    background:#666;
+    color:white;
+}
+.row-4{
+    grid-area:row4;
+    background:red;
+    height:60vh;
+    display:grid;
 }
 
-/* ===========Sign In Page============ */
-body{
-  display:flex;
-  flex-direction: column;
-}
-.navbar{
-  background:red;
-  /* grid-area: navbar; */
-  width:100%;
-  height:10vh;
-  display:block;
-  margin-bottom:5vh;
-}
-.header{
-  background:green;
-  /* grid-area: header; */
-  width: 50%;
-  display:block;
-  height: 10vh;
-  margin-left:auto;
-  margin-right: auto;
-  margin-bottom:2vh;
-}
-.sign-in-form{
-  background:blue;
-  /* grid-area:form; */
-  width:50%;
-  display:block;
-  height:50vh;
-  margin:auto;
-}
-.footer{
-  background:yellow;
-  /* grid-area:footer; */
-  width:100%;
-  display:block;
-  height:10vh;
-  position: absolute;
-  bottom:0;
-}
