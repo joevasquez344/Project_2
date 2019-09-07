@@ -45,41 +45,22 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function (app) {
-
-  app.get("/api/players", function (req, res) {
-    // findAll returns all entries for a table when used with no options
-    db.players.findAll({}).then(function (dbplayers) {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbplayers);
+  app.get("/api/questionCards", function(req, res) {
+    db.questionCards.findAll({})
+    .then(function(dbquestionCards) {
+      res.json(dbquestionCards);
     });
   });
-
-
-  // POST route for saving a new post
-  app.add("/api/players", function (req, res) {
-    db.players.create({
-      name: req.body.text
-    }).then(function (dbplayers) {
-      res.json(dbplayers);
-    })
-      .catch(function (err) {
-        res.json(err);
-      })
-  });
-
-  // app.get("/api/main", function (req, res) {
-  //   // findAll returns all entries for a table when used with no options
-  //   db.main.findAll({}).then(function (dbmain) {
-  //     // We have access to the todos as an argument inside of the callback function
-  //     res.json(dbmain);
-  //   });
-  // });
-  app.get("/api/main", function(req, res) {
-    db.main.findAll({})
-    .then(function(dbmain) {
-      res.json(dbmain);
-    });
-  });
-
-
 };
+
+// module.exports = function (app) {
+//   app.get("/api/login", function(req, res) {
+//     db.players.create({
+//       username: req.body.text,
+//       password: req.body.complete
+//     })
+//     .then(function(dbplayers) {
+//       res.json(dbplayers)
+//     });
+//   });
+// };

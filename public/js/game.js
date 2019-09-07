@@ -1,13 +1,18 @@
 $(document).ready(function () {
+    // var playerList = $(".playerList");
     var mainDeck = [];
-    function getPlayers() {
-        $.get("/api/main", function (data) {
+
+    getCards();
+
+    function getCards() {
+        $.get("/api/questionCards", function (data) {
             console.log(data);
             mainDeck = data;
         })
-        $(".playerList").append(mainDeck);
+
+        // $(".playerList").append(mainDeck);
         console.log(mainDeck);
     }
 
-    getPlayers();
+    
 });

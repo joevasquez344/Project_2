@@ -1,23 +1,21 @@
-
-
 module.exports = function(sequelize, DataTypes) {
-  var main = sequelize.define("main", {
+  var questionCards= sequelize.define("question_cards", {
     description: DataTypes.TEXT,
     played: {
       type: DataTypes.BOOLEAN,
       defaultValue: false}
   });
-  return main;
+  return questionCards;
 }
 
 module.exports = function(sequelize, DataTypes) {
-  var play = sequelize.define("play", {
+  var responseCards = sequelize.define("response_cards", {
     description: DataTypes.TEXT,
     played: {
       type: DataTypes.BOOLEAN,
       defaultValue: false}
   });
-  return play;
+  return responseCards;
 }
 
 module.exports = function(sequelize, DataTypes) {
@@ -30,3 +28,5 @@ module.exports = function(sequelize, DataTypes) {
   });
   return players;
 }
+
+
