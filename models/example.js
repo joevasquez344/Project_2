@@ -1,11 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
-  });
-  return Example;
-  
-};
+
 
 module.exports = function(sequelize, DataTypes) {
   var main = sequelize.define("main", {
@@ -25,4 +18,15 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false}
   });
   return play;
+}
+
+module.exports = function(sequelize, DataTypes) {
+  var players = sequelize.define("players", {
+    username: DataTypes.STRING,
+    password: DataTypes.STRING,
+    points: {
+      type: DataTypes.INTEGER,
+    defaultValue: 0}
+  });
+  return players;
 }

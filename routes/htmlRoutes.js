@@ -29,8 +29,14 @@ var path = require("path");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
   })
 
+  app.get("/game", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/game.html"));
+  })
 
+  app.get("*", function(req, res) {
+        res.render("404");
+      });
 };
