@@ -1,3 +1,7 @@
+//Intial Socket Connection
+
+var socket = io.connect("https://localhost:3000")
+
 $(document).ready(function () {
     // var playerList = $(".playerList");
     var mainDeck = [];
