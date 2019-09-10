@@ -1,5 +1,6 @@
 require("dotenv").config();
 var express = require("express");
+
 //require web sockets (socket.io)
 var socket = require('socket.io');
 
@@ -12,6 +13,7 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
 
 
 
