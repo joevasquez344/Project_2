@@ -1,3 +1,7 @@
+//Intial Socket Connection
+
+var socket = io.connect("https://localhost:3000")
+
 $(document).ready(function () {
     var mainDeck = [];
     var handDeck = [];
@@ -37,4 +41,10 @@ $(document).ready(function () {
             console.log(drawCards + " these are you hand cards");
         })
     }
+<<<<<<< HEAD
 });
+=======
+
+    
+});
+>>>>>>> origin/workspace
