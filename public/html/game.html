@@ -22,7 +22,7 @@
 
 <body>
 
-    <body style='background: #4a4a4a; margin-top: 20vh;'>
+    <body style='background: #4a4a4a; margin-top: 2vh;'>
         <div class="container">
             <!-- Black Card -->
             <div class="row">
@@ -145,11 +145,23 @@
                 </div>
             </div>
 
+
+
+            <!-- ===========================================================================
+                COMMENT BY: JOE...
+                    - I commented your original chat box code out and reworked it
+                     with new columns and rows while still using your core code that you made
+
+                    -I also excluded the input with the ID of: userName 
+                        -It might not be necessary to use since we will be querying the usernames from the database
+
+             ===============================================================================-->
+
             <!-- Chat Window -->
 
-            <div class="row">
+            <!-- <div class="row bg-success" style='position:fixed; bottom:0; height:30vh;'>
 
-                <div id="chat-window">
+                <div id="chat-window" class='chat-window-custom'>
                     <div id="output"></div>
                     <div id="feedback"></div>
                 </div>
@@ -157,7 +169,26 @@
                 <input type="text" id="message" placeholder="Message" />
                 <a class="waves-effect waves-light btn">button</a>
 
-            </div>
+            </div> -->
+
+            <!--====== Joes code below ======== -->
+
+                <div class="row bg-light mb-0" >
+                    <div class="col-md-12">
+                        <div id="chat-window" class='chat-window-custom'>
+                            <div id="output"></div>
+                            <div id="feedback"></div>
+                        </div>
+                    </div>
+                </div>
+               <div class="row bg-primary mt-0">
+                   <div class="col-md-12 d-flex flex-row">
+                    <!-- <input id="userName" type="text" placeholder="User" /> -->
+                    <input class='text-light' type="text" id="message" placeholder="Message"/>
+                    <a class="waves-effect waves-light bg-dark text-light btn my-auto text-align-center">Submit</a>
+                   </div>
+               </div>
+            
 
         </div>
 
