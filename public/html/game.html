@@ -13,59 +13,154 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"
         integrity="sha256-i2Orhi397HWPn93rsCUTW8HBoso65vY/VNTllm9Kuqo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid text-light main">
-        <div class="row dealer-container">
-            <div class="col-md-6 bg-dark dealer-card mx-auto"></div>
-        </div>
-        <div class="row player-container">
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-        </div>
-        <div class="row player-container">
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-            <div class="col-md-3  player-card"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 navbar d-flex justify-content-center align-items-center bg-dark">
-                <i class="fas fa-angle-double-down expand-arrow fa-2x"></i>
+
+    <body style='background: #4a4a4a; margin-top: 20vh;'>
+        <div class="container">
+            <!-- Black Card -->
+            <div class="row">
+                <div class="col s6">
+                    <div class="card #0d47a1 blue darken-4">
+                        <div class="card-content white-text">
+                            <div id="blackCard">
+                                <p>Black Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <!-- User's Hand -->
+            <div class="row" id="userHand">
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card #1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card #2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card #3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card #4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card #5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div id="">
+                                <p>Card#6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-
-
-    </div>
-    <div class="container-fluid more-section">
-        <div class="row">
-            <div class="col-md-12 navbar d-flex justify-content-center align-items-center bg-dark">
-                <i class="fas fa-angle-double-up color-white expand-arrow fa-2x"></i>
             </div>
+
+            <!-- Show ALL -->
+
+            <div class="row" id="finalHand">
+                <div class="col s3">
+                    <div class="card #0d47a1 blue darken-4">
+                        <div class="card-content white-text">
+                            <div id="blackCard">
+                                <p>Black Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="card #2196f3 blue">
+                        <div class="card-content white-text">
+                            <div id="winningCard">
+                                <p>Winning Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div>
+                                <p>other cards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div>
+                                <p>other cards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div class="card #e3f2fd blue lighten-5">
+                        <div class="card-content black-text">
+                            <div>
+                                <p>other cards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Window -->
+
+            <div class="row">
+
+            </div>
+
         </div>
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-9 bg-dark box">b</div>
-        </div>
-    </div>
 
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script scr="../js/game.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script scr="../js/game.js"></script>
+    </body>
 
 </html>

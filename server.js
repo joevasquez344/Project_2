@@ -38,23 +38,30 @@ if (process.env.NODE_ENV === "test") {
 
 // ---------- Socket Set Up ------------// 
 
-var io = socket.listen(
-  app.listen(PORT, function () {
-    console.log('making a socket connection')
-  }
-  )
-);
-
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
-  io.on('connetion', function (socket) {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      "made a connection" + socket.id
-    );
-  });
+// WE set up our app
+var server = app.listen(PORT, function () {
+  console.log("now listening on port " + PORT)
 });
+
+var io = socket.listen(server);
+
+var sqlz = db.sequelize.sync(syncOptions);
+// Starting the server, syncing our models ------------------------------------/
+// db.sequelize.sync(syncOptions).then(function () {
+//   io.on('connetion', function (socket) {
+//     console.log(
+//       ("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser." + PORT),
+//       ("made a connection" + socket.id)
+//     );
+//   });
+// });
+
+io.on('connection', function (socket, sqlz) {
+  console.log(
+    ("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser." + PORT),
+    ("made a connection" + socket.id)
+  );
+})
 
 
 
