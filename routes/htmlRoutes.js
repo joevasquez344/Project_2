@@ -27,16 +27,36 @@ var db = require("../models");
 // };
 var path = require("path");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
   app.get("/", function(req, res) {
+    if (req.user) {
+      res.redirect("/game");
+    }
+    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+  });
+  //   res.sendFile(path.join(__dirname, "../public/html/login.html"));
+  // })
+
+  app.get("/login", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/game");
+    }
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
-  })
+  });
 
-  app.get("/game", function(req, res) {
+  app.get("/members", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
+  app.get("/game", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/game.html"));
-  })
+  });
 
-  app.get("*", function(req, res) {
-        res.render("404");
-      });
+  // app.get("*", function(req, res) {
+  //       res.render("404");
+  //     });
 };
