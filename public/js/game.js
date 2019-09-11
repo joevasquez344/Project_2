@@ -1,8 +1,10 @@
 //Intial Socket Connection
 
-var socket = io.connect("localhost:3000")
+// var socket = io.connect("localhost:3000/game");
 
 $(document).ready(function () {
+
+    // var socket = io.connect("localhost:3000/game");
     // var playerList = $(".playerList");
     var mainDeck = [];
 
@@ -18,5 +20,8 @@ $(document).ready(function () {
         console.log(mainDeck);
     }
 
+
     
+
+
 });

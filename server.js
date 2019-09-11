@@ -56,12 +56,25 @@ var sqlz = db.sequelize.sync(syncOptions);
 //   });
 // });
 
-io.on('connection', function (socket, sqlz) {
-  console.log(
-    ("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser." + PORT),
-    ("made a connection" + socket.id)
-  );
-})
+
+// now socket.io is waiting for a connection to from a cliet
+//we LISTEN UP for a conection
+io.on('connection', function (socket) {
+  console.log("\n==> 🌎  Listening on port:" + PORT + "\n made a socket connection" + socket.id);
+  //make connectin on the front end by establishing the socket cdn on the front and
+  //src script tag at the bottom that refrences a seprerate js file with a connection to localhost
+
+  //we want to get the data from the client 
+  socket.on('chat', function (data) {
+      //we want to grab the data entered by the client and send it to all the othe clients in the chat
+      io.sockets.emit('chat', data);
+  });
+
+  socket.on('typing', function (data) {
+      // we use boradcast, to show other clients sharing the server
+      socket.broadcast.emit('typing', data)
+  })
+});
 
 
 
