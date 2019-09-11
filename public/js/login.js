@@ -3,6 +3,7 @@ $(document).ready(function() {
   var loginForm = $("form.login");
   var usernameInput = $("input#usernameInput");
   var passwordInput = $("input#passwordInput");
+  var playerList = [];
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
@@ -20,6 +21,18 @@ $(document).ready(function() {
     // loginUser(userData.username, userData.password);
     // udernameInput.val("");
     // passwordInput.val("");
+
+    function playerList() {
+      $.get("/api/players", function (data) {
+          console.log(data);
+          for ( var i = 0; i < data.length; i++) {
+              playerList.push(data[i]);
+          }
+          console.log(playerList + " these are all of the current players");
+      })
+      // console.log(mainDeck);
+  } 
+
     window.location.replace("/game");
   });
 

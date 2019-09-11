@@ -37,6 +37,6 @@ module.exports = function(app) {
   })
 
   app.get("*", function(req, res) {
-        res.render("404");
+        // res.render("404");
       });
 };
