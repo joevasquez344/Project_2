@@ -103,3 +103,38 @@ INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES (
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("The Hustle", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("The glass celing", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("Miley Cyrus at 55", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+
+
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What's that smell?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("I got 99 problems but _____ ain't one.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Maybe she's born with it. Maybe it's ____.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What's my next Happy Meal Toy?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Here is the church. Here is the steepple. Open the doors and theres___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("___. Thats how I want to die.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Today on Maury: 'Help! My son is ___!'", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What ended my last relationship?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Whats a girl's best friend?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Whats Batman's guilty pleasure?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What's the most emo?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("I get by with a little help from my ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Instead of coal, Santa now gives the bad children ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("White people like ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What are my parents hiding from me?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What will I bring back in time to convince people I am a powerful wizard?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("How am I maintaing my relationship status?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Next on ESPN2, the World Series of ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What gives me uncontrollable gas?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What's my secret power?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What's there a ton of in heaven?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What would grandma find disturbing, yet oddly charming?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What helps Obama unwind?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Why am I sticky?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What gets better with age?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Daddy, why is mommy crying?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Why do I hurt all over?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What I giving up for Lent?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("The Smithsonian Museum of Natural History has just opened an interactive exhibit on ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("When I am President of the United States, I will create a Department of ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("When I am a billionaire, I shall erect a 50-foot statue to commemorate ___.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("Whats the new fadd diet?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO project2.question_cards (description, createdAt, updatedAt) VALUES ("What never fails to liven up the party?", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
