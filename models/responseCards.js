@@ -1,5 +1,4 @@
-
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
     var responseCards = sequelize.define("response_cards", {
         description: DataTypes.TEXT,
         played: {
@@ -10,4 +9,3 @@ module.exports = function (sequelize, DataTypes) {
 
     return responseCards;
 };
-

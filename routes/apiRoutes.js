@@ -3,14 +3,15 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function (app) {
-  app.get("/api/questionCards", function(req, res) { 
-    db.question_cards.findAll({where: {played: false}})
-    .then(function(dbquestionCards) {
-      res.json(dbquestionCards);
-    });
-  });
+  // app.get("/api/questionCards", function(req, res) { 
+  //   db.question_cards.findAll({where: {played: false}})
+  //   .then(function(dbquestionCards) {
+  //     res.json(dbquestionCards);
+  //   });
+  // });
 
   app.get("/api/responseCards", function(req, res) {
+    console.log("in server")
     console.log(res);
     console.log(db);
     db.response_cards.findAll({where: {played: false}})

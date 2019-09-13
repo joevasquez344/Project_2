@@ -49,8 +49,8 @@
 // var sqlz = db.sequelize.sync(syncOptions);
 
 // // Starting the server, syncing our models ------------------------------------/
-// // db.sequelize.sync(syncOptions).then(function () {
-// //   io.on('connection', function (socket) {
+// // db.sequelize.sync(syncOptions).then(function() {
+// //   io.on('connection', function(socket) {
 // //     console.log(
 // //       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
 // //       PORT,
@@ -83,13 +83,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main"
+//   })
+// );
+// app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/apiRoutes")(app);

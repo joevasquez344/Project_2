@@ -3,6 +3,7 @@
 // var socket = io.connect("https://localhost:3000")
 
 $(document).ready(function () {
+    console.log("start")
     var mainDeck = [];
     var handDeck = [];
     var czarCard;
@@ -12,7 +13,7 @@ $(document).ready(function () {
     getHandCards();
 
     function getMainCards() {
-        $.get("/api/questionCards", function (data) {
+        $.get("/api/questionCards", function(data) {
             console.log(data);
             for ( var i = 0; i < data.length; i++) {
                 mainDeck.push(data[i]);
@@ -27,7 +28,8 @@ $(document).ready(function () {
     } 
 
     function getHandCards() {
-        $.get("/api/responseCards", function (data) {
+        console.log("running")
+        $.get("/api/responseCards", function(data) {
             console.log(data);
             for (var i = 0; i < data.length; i++){
                 handDeck.push(data[i]);
@@ -41,5 +43,6 @@ $(document).ready(function () {
             console.log(drawCards + " these are you hand cards");
         })
     }
+
 });
 
