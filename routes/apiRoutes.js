@@ -11,6 +11,8 @@ module.exports = function (app) {
   });
 
   app.get("/api/responseCards", function(req, res) {
+    console.log(res);
+    console.log(db);
     db.response_cards.findAll({where: {played: false}})
     .then(function(dbresponseCards) {
       res.json(dbresponseCards);
@@ -23,6 +25,19 @@ module.exports = function (app) {
       res.json(dbplayers);
     });
   });
+
+  app.post("/api/players", function(req, res) {
+    db.players.create({
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email
+    })
+    .then(function(dbplayers) {
+      res.json(dbplayers);
+    });
+  })
+  
+
 };
 
 // module.exports = function (app) {
