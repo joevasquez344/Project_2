@@ -29,6 +29,9 @@ var path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
   app.get("/", function(req, res) {
     if (req.user) {
@@ -47,7 +50,7 @@ module.exports = function(app) {
 
   app.get("/game", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/game.html"));
-  })
+  });
 
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/signup.html"));

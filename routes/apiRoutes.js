@@ -22,7 +22,7 @@ module.exports = function (app) {
     });
   });
 
-    // Using the passport.authenticate middleware with our local strategy.
+  // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
@@ -54,6 +54,7 @@ module.exports = function (app) {
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
+
   });
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
@@ -70,6 +71,45 @@ module.exports = function (app) {
       });
     }
   });
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    }
+    else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
+
+
+
+
+  // app.get("/api/players", function (req, res) {
+  //   // findAll returns all entries for a table when used with no options
+  //   db.players.findAll({}).then(function (dbplayers) {
+  //     // We have access to the todos as an argument inside of the callback function
+  //     res.json(dbplayers);
+  //   });
+  // });
+
+
+  // POST route for saving a new post
+  // app.add("/api/players", function (req, res) {
+  //   db.players.create({
+  //     name: req.body.text
+  //   }).then(function (dbplayers) {
+  //     res.json(dbplayers);
+  //   })
+  //     .catch(function (err) {
+  //       res.json(err);
+  //     })
+  // });
 
   // app.get("/api/players", function(req, res) {
   //   db.players.findAll({})
