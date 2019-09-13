@@ -1,51 +1,26 @@
-// var db = require("../models");
-
-// module.exports = function(app) {
-//   app.get("api/players", function(req,res) {
-//     db.
-//   });
-
-//   app.post("/api/player", function(req, res) {
-//     db.Player.create(req.body).then(function(dbPlayer) {
-//       res.json(dbPlayer);
-//     });
-//   });
-
-// }
-
-
-
-// module.exports = function(app) {
-//   // Get all examples
-//   app.get("/api/examples", function(req, res) {
-//     db.Example.findAll({}).then(function(dbExamples) {
-//       res.json(dbExamples);
-//     });
-//   });
-
-//   // Create a new example
-//   app.post("/api/examples", function(req, res) {
-//     db.Example.create(req.body).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-
-//   // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-// };
-
-
-
 var db = require("../models");
 var passport = require("../config/passport.js");
+
 
 // Routes
 // =============================================================
 module.exports = function (app) {
+  app.get("/api/questionCards", function(req, res) { 
+    console.log("in server")
+    db.question_cards.findAll({where: {played: false}})
+    .then(function(dbquestionCards) {
+      res.json(dbquestionCards);
+    });
+  });
+
+  app.get("/api/responseCards", function(req, res) {
+    console.log("in server")
+   
+    db.response_cards.findAll({where: {played: false}})
+    .then(function(dbresponseCards) {
+      res.json(dbresponseCards);
+    });
+  });
 
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -79,6 +54,22 @@ module.exports = function (app) {
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
+
+  });
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    }
+    else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
   });
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
@@ -120,20 +111,36 @@ module.exports = function (app) {
   //     })
   // });
 
-  // app.get("/api/main", function (req, res) {
-  //   // findAll returns all entries for a table when used with no options
-  //   db.main.findAll({}).then(function (dbmain) {
-  //     // We have access to the todos as an argument inside of the callback function
-  //     res.json(dbmain);
+  // app.get("/api/players", function(req, res) {
+  //   db.players.findAll({})
+  //   .then(function(dbplayers) {
+  //     res.json(dbplayers);
   //   });
   // });
 
-  // app.get("/game", function(req, res) {
-  //   db.main.findAll({})
-  //   .then(function(dbmain) {
-  //     res.json(dbmain);
+  // app.post("/api/players", function(req, res) {
+  //   db.players.create({
+  //     username: req.body.username,
+  //     password: req.body.password,
+  //     email: req.body.email
+  //   })
+  //   .then(function(dbplayers) {
+  //     res.json(dbplayers);
   //   });
-  // });
-
+  // })
+  
 
 };
+
+// module.exports = function (app) {
+//   app.get("/api/login", function(req, res) {
+//     db.players.create({
+//       username: req.body.text,
+//       password: req.body.complete
+//     })
+//     .then(function(dbplayers) {
+//       res.json(dbplayers)
+//     });
+//   });
+// };
+
