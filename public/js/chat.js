@@ -1,5 +1,5 @@
 //Make connection
-var socket = io.connect('localhost:3000/game')
+var socket = io.connect('localhost:3000')
 
 //query DOM
 var message = document.getElementById('message');
@@ -15,6 +15,9 @@ button.addEventListener('click', function(){
         message: message.value,
         username: username.value
     })
+    document.getElementById("message").value = "";
+
+    // onclick="document.getElementById('message').value = ''"
 })
 // Here we set up an event listener to call on when there is a key pressed on
 message.addEventListener('keypress', function(){
