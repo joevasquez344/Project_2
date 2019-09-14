@@ -126,6 +126,8 @@ $(document).ready(function () {
         $("#phase1").hide();
         $("#phase2").show();
         roundCount++;
+        $("#player1Choice").text(drawCards[idClicked].description);
+        $("#blackCard").text(czarCard);
     }
     function drawCard(){
         $.get("/api/responseCards", function (data) {
