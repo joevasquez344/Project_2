@@ -1,6 +1,6 @@
 INSERT INTO response_cards (description, createdAt, updatedAt) VALUES ("Old People Smell", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
-.response_cards (description, createdAt, updatedAt) VALUES ("Judge Judy", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
-INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("Hot Pockets", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO response_cards (description, createdAt, updatedAt) VALUES ("Judge Judy", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO response_cards (description, createdAt, updatedAt) VALUES ("Hot Pockets", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("The Trail of Tears", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("An M. Night Shyamalan plot twist", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO project2.response_cards (description, createdAt, updatedAt) VALUES ("Robert Downey, Jr.", CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());

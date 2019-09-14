@@ -1,5 +1,5 @@
 //Make connection
-var socket = io.connect('https://agile-lake-15150.herokuapp.com/')
+var socket = io.connect('http://localhost')
 
 //query DOM
 var message = document.getElementById('message');
