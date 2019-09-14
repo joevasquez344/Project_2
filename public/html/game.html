@@ -15,18 +15,19 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"
-        integrity="sha256-i2Orhi397HWPn93rsCUTW8HBoso65vY/VNTllm9Kuqo=" crossorigin="anonymous"></script> -->
+    <!-- socket.io cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"
+        integrity="sha256-i2Orhi397HWPn93rsCUTW8HBoso65vY/VNTllm9Kuqo=" crossorigin="anonymous"></script>
 </head>
 
 
 <body style='background: #4a4a4a; margin-top: 20vh;'>
     <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a class="btn btn-primary mb-5 float-right" href="/logout">Log Out</a>
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-primary mb-5 float-right" href="/logout">Log Out</a>
             </div>
+        </div>
         <div id="phase1">
             <!-- Black Card -->
             <div class="row">
@@ -152,17 +153,22 @@
         </div>
         <!-- Chat Window -->
 
-        <div class="row">
-
-            <div id="chat-window">
-                <div id="output"></div>
-                <div id="feedback"></div>
+        <div class="row bg-light mb-0">
+            <div class="col-md-12">
+                <div id="chat-window" class='chat-window-custom black-text'>
+                    <div id="output"></div>
+                    <div id="feedback"></div>
+                </div>
             </div>
-            <input id="userName" type="text" placeholder="User Name" />
-            <input type="text" id="message" placeholder="Message" />
-            <a class="waves-effect waves-light amber btn">button</a>
-
         </div>
+        <div class="row bg-primary mt-0">
+            <div class="col-md-12 d-flex flex-row">
+                <input class='text-light' id="username" type="text" placeholder="User Name" />
+                <input class='text-light' type="text" id="message" placeholder="Message" />
+                <button class="bg-dark text-light btn my-auto text-align-center" id="send">Send</button>
+            </div>
+        </div>
+
 
     </div>
 
