@@ -11,11 +11,15 @@ var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
-var hbs = exphbs.create({ /* config */ });
- 
-// Register `hbs.engine` with the Express app.
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+
+// Handlebars
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main"
+  })
+);
+app.set("view engine", "handlebars");
 
 // ---------- Socket Set Up ------------// 
 // WE set up our app
