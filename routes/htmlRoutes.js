@@ -53,7 +53,7 @@ module.exports = function(app) {
   });
 
   app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signUp.html"));
+    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
   })
 
   app.get("/index", isAuthenticated, function(req, res) {
