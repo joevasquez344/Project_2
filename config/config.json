@@ -8,8 +8,8 @@
   },
   "test": {
     "username": "root",
-    "password": "root",
-    "database": "project2",
+    "password": null,
+    "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
