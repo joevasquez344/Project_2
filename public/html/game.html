@@ -28,11 +28,15 @@
                 <a class="btn btn-primary mb-5 float-right" href="/logout">Log Out</a>
             </div>
         </div>
+        <div id="playerName">
+            player ...
+        </div>
+        <div id="timeRemaining"></div>
         <div id="phase1">
             <!-- Black Card -->
             <div class="row">
                 <div class="col s6">
-                    <div class="card #0d47a1 blue darken-4">
+                    <div class="card #0d47a1 blue darken-4 cardTemplateBlack">
                         <div class="card-content white-text">
                             <div id="blackCard">
                                 <p>Black Card</p>
@@ -44,58 +48,105 @@
             <!-- User's Hand -->
             <div class="row" id="userHand">
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5">
                         <div class="card-content black-text">
                             <div id="hand1">
                                 <p>Card #1</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate" id="0">
+                            <div id="hand1">
+                                <p>Card #1</p>
+                            </div>
+                        </button>
                     </div>
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5 cardTemplate">
                         <div class="card-content black-text">
                             <div id="hand2">
                                 <p>Card #2</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate" id="1">
+                            <div id="hand2">
+                                <p>Card #2</p>
+                            </div>
+                        </button>
                     </div>
+                    <!-- <button id="choiceButton" value=1></button> -->
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5 cardTemplate">
                         <div class="card-content black-text">
                             <div id="hand3">
                                 <p>Card #3</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate" id="2">
+                            <div id="hand3">
+                                <p>Card #3</p>
+                            </div>
+                        </button>
                     </div>
+                    <!-- <button class="choiceButton" value=2></button> -->
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5 cardTemplate">
                         <div class="card-content black-text">
                             <div id="hand4">
                                 <p>Card #4</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate" id="3">
+                            <div id="hand4">
+                                <p>Card #4</p>
+                            </div>
+                        </button>
                     </div>
+                    <!-- <button class="choiceButton" value=3></button> -->
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5 cardTemplate">
                         <div class="card-content black-text">
                             <div id="hand5">
                                 <p>Card #5</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate" id="4">
+                            <div id="hand5">
+                                <p>Card #5</p>
+                            </div>
+                        </button>
                     </div>
+                    <!-- <button class="choiceButton" value=4></button> -->
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
+                    <!-- <div class="card #e3f2fd blue lighten-5 cardTemplate">
                         <div class="card-content black-text">
                             <div id="hand6">
                                 <p>Card#6</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div>
+                        <button class="cardTemplate">
+                            <div id="hand6" id="5">
+                                <p>Card #6</p>
+                            </div>
+                        </button>
                     </div>
+                    <!-- <button class="choiceButton" value="5"></button> -->
                 </div>
 
             </div>
@@ -106,7 +157,7 @@
             <div class="row" id="finalHand">
                 <div class="col s3">
                     <div class="card #0d47a1 blue darken-4">
-                        <div class="card-content white-text">
+                        <div class="card-content white-text cardTemplateBlack">
                             <div id="blackCard">
                                 <p>Black Card</p>
                             </div>
@@ -114,39 +165,39 @@
                     </div>
                 </div>
                 <div class="col s3">
-                    <div class="card #2196f3 blue">
-                        <div class="card-content white-text">
-                            <div id="winningCard">
-                                <p>Winning Card</p>
+                    <div>
+                        <button class="cardTemplate" id="0">
+                            <div id="player1Choice">
+                                <p>Card #1</p>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
-                        <div class="card-content black-text">
-                            <div>
+                    <div>
+                        <button class="cardTemplate" id="3">
+                            <div id="">
                                 <p>other cards</p>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
-                        <div class="card-content black-text">
-                            <div>
+                    <div>
+                        <button class="cardTemplate" id="3">
+                            <div id="">
                                 <p>other cards</p>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="col s2">
-                    <div class="card #e3f2fd blue lighten-5">
-                        <div class="card-content black-text">
-                            <div>
+                    <div>
+                        <button class="cardTemplate" id="3">
+                            <div id="">
                                 <p>other cards</p>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -185,4 +236,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="../js/game.js"></script>
+
 </body>

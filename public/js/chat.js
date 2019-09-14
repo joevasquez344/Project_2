@@ -9,6 +9,13 @@ var output = document.getElementById('output');
 var feedback = document.getElementById('feedback');
 
 
+var numUsers = 0;
+var players = {};
+
+players[socket.id] = {
+  playerId: socket.id,
+}
+console.log(players[socket.id]);
 
 //Emit events
 button.addEventListener('click', function (e) {
