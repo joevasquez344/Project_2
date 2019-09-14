@@ -1,5 +1,5 @@
 //Make connection
-var socket = io.connect('http://localhost')
+var socket = io.connect('https://fierce-tundra-50135.herokuapp.com')
 
 //query DOM
 var message = document.getElementById('message');
