@@ -2,7 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var mysql = require("mysql");
 var sequelize = require("sequelize");
-// var exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 // Reuiring passport as we've configured it
@@ -36,18 +36,6 @@ app.use(bodyParser.urlencoded({ extended: false })); //For body parser
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-<<<<<<< HEAD
-// Handlebars
-// app.engine(
-//   "handlebars",
-//   exphbs({
-//     defaultLayout: "main"
-//   })
-// );
-// app.set("view engine", "handlebars");
-=======
-
->>>>>>> 7dc844805a455127d230608657ab0b7fe1896f20
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
