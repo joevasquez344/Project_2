@@ -14,6 +14,15 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// Handlebars
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main"
+  })
+);
+app.set("view engine", "handlebars");
+
 // ---------- Socket Set Up ------------// 
 // WE set up our app
 var server = app.listen(PORT, function () {
@@ -27,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false })); //For body parser
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+<<<<<<< HEAD
 // Handlebars
 // app.engine(
 //   "handlebars",
@@ -35,6 +45,9 @@ app.use(express.static("public"));
 //   })
 // );
 // app.set("view engine", "handlebars");
+=======
+
+>>>>>>> 7dc844805a455127d230608657ab0b7fe1896f20
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));

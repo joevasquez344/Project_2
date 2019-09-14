@@ -10,7 +10,7 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && cross-env NODE_ENV=development mocha -u tdd --reporter spec --exit"
   },
   "license": "ISC",
   "dependencies": {
@@ -25,7 +25,9 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.18.2",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "ejs": "latest",
+    "aws-sdk": "latest"
   },
   "devDependencies": {
     "chai": "^4.2.0",
