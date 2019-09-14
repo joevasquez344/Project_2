@@ -11,6 +11,11 @@ var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
+var hbs = exphbs.create({ /* config */ });
+ 
+// Register `hbs.engine` with the Express app.
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 // ---------- Socket Set Up ------------// 
 // WE set up our app
@@ -25,14 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false })); //For body parser
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
